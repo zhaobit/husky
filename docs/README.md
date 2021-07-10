@@ -3,7 +3,7 @@
 [dotNet 5 windows (点击下载)](https://download.visualstudio.microsoft.com/download/pr/2b83d30e-5c86-4d37-a1a6-582e22ac07b2/c7b1b7e21761bbfb7b9951f5b258806e/windowsdesktop-runtime-5.0.7-win-x64.exe)
 
 2. 下载程序
-[超级哈士奇 (点击下载)](https://cdn.jsdelivr.net/gh/zhaobit/husky@main/releases/SuperHuskySwapV1.0.0.7.zip) 并解压运行 SuperHuskySwap.exe
+[超级哈士奇 (点击下载)](https://cdn.jsdelivr.net/gh/zhaobit/husky@main/releases/SuperHuskySwapV1.0.0.8.zip) 并解压运行 SuperHuskySwap.exe
 
 # 激活程序
 1. 填写您的账号密码,激活KEY 点击激活
