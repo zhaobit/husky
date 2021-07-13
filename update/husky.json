@@ -1,15 +1,15 @@
 {
-  "currentversion": 1000009,
+  "currentversion": 1000010,
   "minversion": 1000009,
   "versions": [
     {
-      "version": 1000009,
+      "version": 1000010,
       "releases": {
         "type": "total",
         "filenum": 1,
-        "path": "/releases/SuperHuskySwapV1.0.0.9.zip"
+        "path": "/releases/SuperHuskySwapV1.0.0.10.zip"
       },
-      "issue": "xxx"
+      "issue": "添加自动更新程序."
     },
     {
       "version": 1000008,
