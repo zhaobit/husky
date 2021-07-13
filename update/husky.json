@@ -1,0 +1,23 @@
+{
+  "currentversion": 10000009,
+  "minversion": 10000009,
+  "versions": [
+    {
+      "version": 10000009,
+      "releases": {
+        "type": "total",
+        "filenum": 1,
+        "path": "/releases/SuperHuskySwapV1.0.0.9.zip"
+      },
+      "issue": ""
+    },
+    {
+      "version": 10000008,
+      "releases": {
+        "type": "partition",
+        "filenum": 3,
+        "path": "/releases/SuperHuskySwapV1.0.0.9.zip.{filenum}"
+      }
+    }
+  ]
+}
