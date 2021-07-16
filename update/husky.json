@@ -1,7 +1,16 @@
 {
-  "currentversion": 1000010,
+  "currentversion": 1000011,
   "minversion": 1000009,
   "versions": [
+    {
+      "version": 1000011,
+      "releases": {
+        "type": "total",
+        "filenum": 1,
+        "path": "/releases/SuperHuskySwapV1.0.0.11.zip"
+      },
+      "issue": "1.不限制gas输入\r\n2.修复若干BUG."
+    },
     {
       "version": 1000010,
       "releases": {
