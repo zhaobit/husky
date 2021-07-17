@@ -3,6 +3,15 @@
   "minversion": 1000009,
   "versions": [
     {
+      "version": 1000012,
+      "releases": {
+        "type": "total",
+        "filenum": 1,
+        "path": "/releases/SuperHuskySwapV1.0.0.12.zip"
+      },
+      "issue": "V1.0.0.12\r\n1.提高交易对检测\r\n2.修复若干BUG."
+    },
+    {
       "version": 1000011,
       "releases": {
         "type": "total",
