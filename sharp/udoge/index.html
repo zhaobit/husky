@@ -12,10 +12,10 @@
 
 	<script type="text/javascript">
 		// set your interval in milliseconds
-		var reloadInterval = 60000;
+		var reloadInterval = 20000;
 		// this will run when the document is fully loaded
 		function init() {
-			setTimeout('reload()', reloadInterval);
+			//setTimeout('reload()', reloadInterval);
 		}
 		// this reloads the iframe, and triggers the next reload interval
 		function reload() {
@@ -26,15 +26,19 @@
 			for (var i = 0; i < iframes.length; i++)
 				iframes[i].src = iframes[i].src;
 
-			setTimeout('reload()', reloadInterval);
+			//setTimeout('reload()', reloadInterval);
+      reloading=reloadInterval;
 		}
-		// load the init() function when the page is fully loaded
-		window.onload = init;
-
-
+    reloading=reloadInterval;
 		var x = setInterval(function() {
-			
-		}, 3000);
+			reloading-=1000;
+      document.getElementById('status').innerText=(reloading/1000)+'/s Reload';
+      if(reloading<1)
+      {
+        location.reload();
+        //reload();
+      }
+		}, 1000);
 	</script>
 
 </head>
@@ -44,7 +48,8 @@
     <img src="https://zhaobit.github.io/husky/sharp/udoge/logo.jpg" width="100"/>
     <h3>QQ群 : 781709561</h3>
   [英文] <a href="https://t.me/UncleDogeOfficial"/>https://t.me/UncleDogeOfficial</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  [中文总群] <a href="https://t.me/UncleDogeCN"/>https://t.me/UncleDogeCN</a>
+  [中文总群] <a href="https://t.me/UncleDogeCN"/>https://t.me/UncleDogeCN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span id="status"></span>
 </div>
 	<table>
 		<tr>
