@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>刷热度</title>
+<style type="text/css"> 
+<!-- 
+#nav{width:100%;background:#666666;color:#FFFFFF; 
+ text-align:center; font-size:13px; font-weight:bold;} 
+#nav a,span {border-left:#CCCCCC 1px solid; display:inline-block;
+ height:40px; line-height:40px; padding:0px 10px; margin-left:-8px;} 
+#nav a:link,a:visited,a:active{ text-decoration:none; color:#FFFFFF;} 
+#nav a:hover { background:#CCCCCC;} 
+-->
+</style></head> 
+	<style>
+		body {
+			background-color: black;			
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+  <div style="color:white">
+    <h3><a href="https://www.zhaobit.com/daohang.html" target="_blank" style="color:white">https://www.zhaobit.com/</a></h3>
+    <input style="width:500px;height:30px" type="text" id="pair"/>
+    <button style="width:70px;height:30px" onclick="setpair()">生效</button>
+    <span id="status" style="margin-left: 50px; border:0;"></span>
+  </div>
+	<table>
+		<tr>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+		</tr>
+			<tr>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+		</tr>
+			<tr>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+			<td><iframe
+					
+					width="400" height="250" scrolling="no"></iframe></td>
+		</tr>
+	</table>
+  <script type="text/javascript">
+  
+		// set your interval in milliseconds
+    var reloaded = 30000;
+		var reloadInterval = 30000;
+    window.pair=window.location.hash.substring(1);
+    document.getElementById('pair').value = window.pair;
+		// this will run when the document is fully loaded
+    function setpair(){
+      window.pair=document.getElementById('pair').value.trim();
+    history.pushState(null,null,location.href='#'+window.pair);
+    reloaded=0;
+    reload();
+  }
+		// this reloads the iframe, and triggers the next reload interval
+		function reload() {
+			var iframes = document.getElementsByTagName('iframe');
+			if (!iframes)
+				return false;
+
+			for (var i = 0; i < iframes.length; i++)
+				iframes[i].src = `https://www.dextools.io/app/pancakeswap/pair-explorer/${window.pair}`;
+
+			//setTimeout('reload()', reloadInterval);
+		}
+		// load the init() function when the page is fully loaded
+		//window.onload = init;
+//https://www.dextools.io/app/pancakeswap/pair-explorer/0xc78125d158e343b47b98ee6837e62760ebccb6ae
+
+		var x = setInterval(function() {
+			if(reloaded>=reloadInterval)
+      {
+        reloaded=0;
+        if(window.pair.length==42)
+        {reload();}
+      }
+      reloaded+=1000;
+      document.getElementById('status').innerText=`${((reloadInterval-reloaded)/1000).toFixed(0)} /s 后刷新.`;
+		}, 1000);
+	</script>
+  </body>
+</html>
